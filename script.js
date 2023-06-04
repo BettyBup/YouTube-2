@@ -1,3 +1,50 @@
+
+
+// Declaración de variables
+
+var searchInput = document.querySelector(".search-input");
+
+var searchForm = document.querySelector("#search-form");
+
+var menuToggle = document.querySelector(".menu-toggle");
+
+var menuOverlay = document.querySelector(".menu-overlay");
+
+var menuClose = document.querySelector(".menu-close");
+
+var menu = document.querySelector("nav ul");
+
+// Controlador de eventos para mostrar/el ocultar menú
+
+menuToggle.addEventListener("click", function() {
+
+  menuOverlay.classList.toggle("open");
+
+  menu.classList.toggle("open");
+
+});
+
+menuClose.addEventListener("click", function() {
+
+  menuOverlay.classList.remove("open");
+
+  menu.classList.remove("open");
+
+});
+
+// Controlador de eventos para enviar formulario de búsqueda
+
+searchForm.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  var searchTerm = searchInput.value;
+
+  window.location.href = "https://www.youtube.com/results?search_query=" + searchTerm;
+
+});
+
+
 var slideIndex = 0;
 showSlides();
 
